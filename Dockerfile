@@ -4,4 +4,4 @@ RUN apt-get install maven -y
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 RUN cp -r boxfuse-sample-java-war-hello/* /usr/local/tomcat/
 RUN mvn package
-RUN mv /usr/local/tomcat/webapps.dist /usr/local/tomcat/webapps
+RUN cp /usr/local/tomcat/target/hello-1.0.war /usr/local/tomcat/webapps/webapps.dist/
