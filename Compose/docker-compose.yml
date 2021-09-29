@@ -7,7 +7,7 @@ services:
     volumes:
       - type: volume
         source: site
-        target: /usr/local/tomcat
+        target: /usr/local/tomcat/target/hello-1.0
 
   web:
     image: tomcat:8.5.3-jre8-alpine
