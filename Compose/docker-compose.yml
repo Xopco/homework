@@ -6,8 +6,8 @@ services:
       context: 1/
     volumes:
       - type: volume
-        source: /usr/local/tomcat
-        target: site
+        source: site
+        target: /usr/local/tomcat
 
   web:
     image: tomcat:8.5.3-jre8-alpine
