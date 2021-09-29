@@ -10,7 +10,9 @@ services:
   web:
     image: tomcat:8.5.3-jre8-alpine
     volumes:
-      - site:/usr/local/tomcat/webapps
+      - type: volume
+        source: site
+        target: /usr/local/tomcat/webapps
     ports:
       - "8080:8080"
 
