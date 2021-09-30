@@ -5,7 +5,11 @@ services:
     build:
       context: 1/
     volumes:
-      - site:/usr/local/tomcat/target/hello-1.0
+      - type: volume
+        source: site
+        target: /usr/local/tomcat/target/hello-1.0
+    ports:
+      - "8080:8080"
 
   web:
     image: tomcat:8.5.3-jre8-alpine
